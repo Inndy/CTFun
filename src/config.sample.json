@@ -1,0 +1,29 @@
+{
+    "env": "development",
+    "_env": "production",
+
+    "database": {
+        "type": "sqlite",
+        "path": "database.sqlite3"
+    },
+    "_database": {
+        "type": "mysql",
+        "connect_string": "mysql:///root:root@localhost:3306"
+    },
+
+    "enc": {
+        "session_key": "0123456789abcdef0123456789abcdef",
+        "encryption_key": "0123456789abcdef0123456789abcdef"
+    },
+
+    "smtp": {
+        "host": "smtp.example.com",
+        "port": 587,
+        "use_tls": true,
+        "user": "example",
+        "password": "this is my password",
+        "from": "ctf@example.com"
+    },
+
+    "admins": [ "inndy" ]
+}
