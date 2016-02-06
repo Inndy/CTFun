@@ -28,7 +28,12 @@ def render(markdown_source, safe_mode=False):
     """
     render markdown to html5
 
-    safe_mode   to escape html entities or not
+    :param markdown_source: markdown source
+    :param safe_mode: to escape html entities or not
+    :type markdown_source: str
+    :type safe_mode: bool
+    :return: rendered html
+    :rtype: str
     """
     enabled_extensions = [
         'markdown.extensions.fenced_code',

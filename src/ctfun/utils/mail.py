@@ -15,8 +15,16 @@ __all__ = [ 'sendmail' ]
 def sendmail(receiver, subject, content_html=None, content_text=None):
     """
     send email to reciver(s) with subject and html or plaintext content.
-
     either `content_html` or `content_text` must be assigned, or in both.
+
+    :param receiver: receivers' email address, could be str or list of str
+    :param subject: subject
+    :param content_html: content in html format
+    :param content_text: content in plain text
+    :type receiver: str, list
+    :type subject: str
+    :type content_html: str
+    :type content_text: str
     """
     if not content_text and not content_html:
         raise ValueError('either `content_html` or `content_text` must be set')
