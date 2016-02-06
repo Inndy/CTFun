@@ -4,5 +4,3 @@ from ..common import *
 @view('index.html')
 def index():
     pass
-
-print('Home loaded')
