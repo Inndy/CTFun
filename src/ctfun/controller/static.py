@@ -1,6 +1,5 @@
 from ..common import *
-from bottle import static_file
 
 @route('/static/<filename:path>')
 def static(filename):
-    return static_file(filename, root=os.path.join(config.PATH, 'static'))
+    return bottle.static_file(filename, root=os.path.join(config.PATH, 'static'))
