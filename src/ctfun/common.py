@@ -1,6 +1,7 @@
 # Notice that this file will be included by common.py,
 # NEVER EVER DO `from . import common`
 
+import functools
 import json
 import os
 import sys
@@ -11,15 +12,12 @@ from glob import glob
 import bottle
 from bottle import route, request, response
 
-def view(tpl_name, **kwargs):
-    if tpl_name[0] not in './':  # relative or absolute path
-        tpl_name = os.path.join(os.path.dirname(__file__), 'pages', tpl_name)
-    return bottle.view(tpl_name, **kwargs)
-
 from . import config
 
+view = functools.partial(bottle.view, template_lookup=[config.PATH + '/pages'])
+
 __all__ = [
-    'json', 'os', 'sys', 'glob',  # stdlib
+    'functools', 'json', 'os', 'sys', 'glob',  # stdlib
     'grab',
     'config',
     'bottle', 'route', 'request', 'response', 'view'  # bottle.py basics

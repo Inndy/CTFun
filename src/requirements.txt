@@ -1,4 +1,3 @@
-bottle
 markdown
 peewee
 requests
