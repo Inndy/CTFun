@@ -9,8 +9,8 @@ import sys
 from glob import glob
 
 # bottle.py
-import bottle
-from bottle import route, request, response
+from . import bottle
+from .bottle import route, request, response
 
 from . import config
 
